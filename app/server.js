@@ -9,6 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use('/coverage', express.static(path.join(__dirname, '..', 'coverage')));
 
+
 // ejs for view templates
 app.engine('.html', require('ejs').__express);
 app.set('views', path.join(__dirname, 'views'));
