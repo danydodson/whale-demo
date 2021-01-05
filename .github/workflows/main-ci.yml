@@ -69,10 +69,3 @@ jobs:
           target: prod
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
-
-      - name: Update repo description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_KEY }}
-          repository: user/app
